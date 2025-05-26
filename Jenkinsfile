@@ -1,13 +1,13 @@
 pipeline {
     agent any
     environment {
-        SERVICE = 'account'
-        NAME = "humbertosandmann/${env.SERVICE}"
+        SERVICE = 'order'
+        NAME = "lucafeltrin14/${env.SERVICE}"
     }
     stages {
         stage('Dependecies') {
             steps {
-                build job: 'account', wait: true
+                build job: 'order', wait: true
             }
         }
         stage('Build') { 
